@@ -1,0 +1,19 @@
+{
+    "name": "nabil/learn-php-mvc",
+    "autoload": {
+        "psr-4": {
+            "Nopel\\": "src/",
+            "App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nabil Hamada",
+            "email": "31300818+nabil12ful@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/var-dumper": "^5.4"
+    }
+}
