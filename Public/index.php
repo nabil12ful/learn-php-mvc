@@ -9,6 +9,9 @@ use Nopel\Http\Route;
 use Nopel\Http\Request;
 use Nopel\Http\Response;
 use Nopel\Support\Arr;
+use Nopel\Validation\Rules\AlphaNumericalRule;
+use Nopel\Validation\Rules\RequiredRule;
+use Nopel\Validation\Validator;
 
 // $route = new Route(new Request, new Response);
 // echo '<pre>'; 
@@ -22,13 +25,11 @@ $env = Dotenv::createImmutable(base_path());
 $env->load();
 
 app()->run();
-$a1 = [
-    'db' => [
-        'connection' => 
-        [
-            'default' => 'mysql',
-        ]
-    ]
+
+
+$data = [
+    'password' => 'nabil',
+    'password_confirmation' => 'nabil4',
 ];
 // var_dump(Arr::only($a1, ['username', 'email']));
 // var_dump(Arr::has(['db' => ['connection' => ['default' => 'mysql']]], 'db.connection.default'));
@@ -42,3 +43,13 @@ $a1 = [
 
 // dump(config(['database.default' => 'sqlite']));
 // dump(config());
+
+// $valid = new Validator();
+// // $valid->setAliases([
+    
+// // ]);
+// $valid->make($data, [
+//     'password' => 'required'
+// ]);
+
+// dump($valid->errors());
